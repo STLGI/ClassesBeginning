@@ -2,20 +2,20 @@
 {
 	public class Rectangle
 	{
-		private double side1, side2;
+		private double _side1, _side2;
 		public Rectangle(double side1, double side2)
 		{
-			this.side1 = side1;
-			this.side2 = side2;
+			_side1 = side1;
+			_side1 = side2;
 		}
 
 		public double AreaCalculator()
 		{
-			return side1 * side2;
+			return _side1 * _side2;
 		}
 		public double PerimeterCalculator()
 		{ 
-			return side1 * 2 + side2 * 2;
+			return _side1 * 2 + _side2 * 2;
 		}
 		public double Area
 		{

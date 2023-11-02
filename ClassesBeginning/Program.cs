@@ -3,8 +3,38 @@
 	using ClassLib;
 	internal class Program
 	{
+
+
 		static void Main(string[] args)
 		{
+
+			void Num3( Point point1,  Point point2, Point point3)
+			{
+				Figure polygon = new Figure(point1, point2, point3);
+				Console.Write("Треугольник, периметр - ");
+				polygon.PerimeterCalculator();
+			}
+
+			void Num4( Point point1, Point point2, Point point3)
+			{
+				Console.WriteLine("Введите коордниаты 4 точки: ");
+				Point point4 = new Point(Convert.ToInt64(Console.ReadLine()), Convert.ToInt64(Console.ReadLine()), "4");
+				Figure polygon = new Figure(point1, point2, point3, point4);
+				Console.Write("Четырехугольник, ");
+				polygon.PerimeterCalculator();
+			}
+
+			void Num5( Point point1, Point point2,  Point point3)
+			{
+				Console.WriteLine("Введите коордниаты 4 точки: ");
+				Point point4 = new Point(Convert.ToInt64(Console.ReadLine()), Convert.ToInt64(Console.ReadLine()), "4");
+				Console.WriteLine("Введите коордниаты 5 точки: ");
+				Point point5 = new Point(Convert.ToInt64(Console.ReadLine()), Convert.ToInt64(Console.ReadLine()), "5");
+				Figure polygon = new Figure(point1, point2, point3, point4, point5);
+				Console.Write("Пятиугольник, ");
+				polygon.PerimeterCalculator();
+			}
+
 			//Выбор задания
 
 			int assignNum;
@@ -98,32 +128,20 @@
 
 				if (num == 3)
 				{
-					Figure polygon = new Figure (point1, point2, point3);
-					Console.Write("Треугольник, периметр - ");
-					polygon.PerimeterCalculator();
+					Num3 ( point1, point2, point3);
 				}
 
 				//Если точек 4
 
 				if(num == 4) {
-					Console.WriteLine("Введите коордниаты 4 точки: ");
-					Point point4 = new Point(Convert.ToInt64(Console.ReadLine()), Convert.ToInt64(Console.ReadLine()), "4");
-					Figure polygon = new Figure(point1, point2, point3, point4);
-					Console.Write("Четырехугольник, ");
-					polygon.PerimeterCalculator();
+					Num4( point1,  point2, point3);
 				}
 
 				//Если точек 5
 
 				if (num == 5)
 				{
-					Console.WriteLine("Введите коордниаты 4 точки: ");
-					Point point4 = new Point(Convert.ToInt64(Console.ReadLine()), Convert.ToInt64(Console.ReadLine()), "4");
-					Console.WriteLine("Введите коордниаты 5 точки: ");
-					Point point5 = new Point(Convert.ToInt64(Console.ReadLine()), Convert.ToInt64(Console.ReadLine()), "5");
-					Figure polygon = new Figure(point1, point2, point3, point4, point5);
-					Console.Write("Пятиугольник, ");
-					polygon.PerimeterCalculator();
+					Num5(point1, point2, point3);
 				}
 
 				

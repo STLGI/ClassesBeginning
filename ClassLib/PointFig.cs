@@ -8,50 +8,50 @@ namespace ClassLib
 {
 	public class Point
 	{
-		private long  x, y;
-		private string? num;
-		public long X { get { return x; } }
-		public long Y { get { return y; } }
-		public string? Polygon { get { return num; } }
+		private long  _x, _y;
+		private string? _num;
+		public long X { get { return _x; } }
+		public long Y { get { return _y; } }
+		public string? Polygon { get { return _num; } }
 
 		public Point(long x, long y, string? num)
 		{
-			this.x = x;
-			this.y = y;
-			this.num = num;
+			_x = x;
+			_y = y;
+			_num = num;
 		}
 	}
 
 	public class Figure
 	{
-		private Point? point1, point2, point3, point4, point5;
-		private int count; 
-		private double perim;
+		private Point? _point1, _point2, _point3, _point4, _point5;
+		private int _count; 
+		private double _perim;
 
 		public Figure(Point point1, Point point2, Point point3)
 		{
-			this.point1 = point1;
-			this.point2 = point2;
-			this.point3 = point3;
-			count = 3;
+			_point1 = point1;
+			_point2 = point2;
+			_point3 = point3;
+			_count = 3;
 		}
 
 		public Figure(Point point1, Point point2, Point point3, Point point4)
 		{
-			this.point1 = point1;
-			this.point2 = point2;
-			this.point3 = point3;
-			this.point4 = point4;
-			count = 4;
+			_point1 = point1;
+			_point2 = point2;
+			_point3 = point3;
+			_point1 = point4;
+			_count = 4;
 		}
 		public Figure(Point point1, Point point2, Point point3, Point point4, Point point5)
 		{
-			this.point1 = point1;
-			this.point2 = point2;
-			this.point3 = point3;
-			this.point4 = point4;
-			this.point5 = point5;
-			count = 5;
+			_point1 = point1;
+			_point1 = point2;
+			_point1 = point3;
+			_point1 = point4;
+			_point1 = point5;
+			_count = 5;
 		}
 
 		public double LengthSide(Point A, Point B)
@@ -61,18 +61,18 @@ namespace ClassLib
 
 		public void PerimeterCalculator()
 		{
-			if(count == 3) {
-				perim = LengthSide(point1, point2) + LengthSide(point2, point3) + LengthSide(point3, point1);
+			if(_count == 3) {
+				_perim = LengthSide(_point1, _point2) + LengthSide(_point2, _point3) + LengthSide(_point3, _point1);
 			}
-			if(count == 4)
+			if(_count == 4)
 			{
-				perim = LengthSide(point1, point2) + LengthSide(point2, point3) + LengthSide(point3, point4) + LengthSide(point4, point1);
+				_perim = LengthSide(_point1, _point2) + LengthSide(_point2, _point3) + LengthSide(_point3, _point4) + LengthSide(_point4, _point1);
 			}
-			if(count == 5)
+			if(_count == 5)
 			{
-				perim = LengthSide(point1, point2) + LengthSide(point2, point3) + LengthSide(point3, point4) + LengthSide(point4, point5) + LengthSide(point5, point1);
+				_perim = LengthSide(_point1, _point2) + LengthSide(_point2, _point3) + LengthSide(_point3, _point4) + LengthSide(_point4, _point5) + LengthSide(_point5, _point1);
 			}
-			Console.WriteLine(perim);
+			Console.WriteLine(_perim);
 		}
 
 
